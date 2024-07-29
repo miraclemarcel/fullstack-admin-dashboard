@@ -1,0 +1,44 @@
+.sidebar {
+    position: sticky;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .logoContainer{
+    padding: 20px 0 15px 0;
+    margin-left: 30px;
+  }
+  .logo {
+    font-size: 20px;
+
+  }
+  .menuText{
+    color: var(--dark-grey);
+    padding: 10px;
+  }
+  .sidebarContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .menuList {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    /* color: var(--dark-grey); */
+    font-size: 14px;
+  }
+  
+  
+  
+  .settings {
+    padding: 0;
+    margin-bottom: 50px;
+
+  }
+  
