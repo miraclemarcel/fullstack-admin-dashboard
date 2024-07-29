@@ -1,9 +1,16 @@
-import MenuLink from "./menuLink/menuLink";
+import MenuLink from './menuLink/menuLink';
 import styles from './sidebar.module.css';
 import { MdDashboard, MdAnalytics, MdPeople, MdNotifications, MdSettings, MdTripOrigin } from 'react-icons/md';
+import React from 'react';
 
-const SideBar = () => {
-  const mainMenuItems = [
+interface MenuItem {
+  title: string;
+  path: string;
+  icon: React.ReactElement;
+}
+
+const SideBar: React.FC = () => {
+  const mainMenuItems: MenuItem[] = [
     {
       title: "Dashboard",
       path: "/dashboard",
@@ -46,7 +53,7 @@ const SideBar = () => {
     },
   ];
 
-  const settingsItem = {
+  const settingsItem: MenuItem = {
     title: "Settings",
     path: "/dashboard/settings",
     icon: <MdSettings />,
@@ -55,7 +62,7 @@ const SideBar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.logoContainer}>
-        <h3 className={styles.logo} >LOGO</h3>
+        <h3 className={styles.logo}>LOGO</h3>
       </div>
       <div className={styles.sidebarContent}>
         <ul className={styles.menuList}>
@@ -66,7 +73,6 @@ const SideBar = () => {
             </li>
           ))}
         </ul>
-        {/* ====setings and dark mode section==== */}
         <ul className={styles.settings}>
           <li className={styles.menuItem}>
             <MenuLink item={settingsItem} />
